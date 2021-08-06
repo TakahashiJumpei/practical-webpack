@@ -18,12 +18,12 @@ const z = { z: 3 };
 console.log({ x: 1, y: 2, ...z }); // => { x: 1, y: 2, z: 3 }
 
 const promise = new Promise((resolve) => {
-    setTimeout(() => resolve('hello!'), 3000);
-  });
-  
-  async function delayHello() {
-    const value = await promise;
-    console.log(value);
-  }
-  
-  delayHello();
+  setTimeout(() => resolve('hello!'), 3000);
+});
+
+async function delayHello() {
+  const value = await promise;
+  console.log(value);
+}
+
+delayHello();

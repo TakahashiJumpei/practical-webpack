@@ -55,6 +55,24 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'images',
+              publicPath: '/images',
+            },
+          },
+          'image-webpack-loader',
+        ],
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
     ],
   },
   plugins: [

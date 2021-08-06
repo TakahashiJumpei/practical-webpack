@@ -5,7 +5,7 @@ import { greet } from './modules/greet';
 
 console.log('app');
 
-// const result = add(1, 2);
+const result = add(1, 2);
 
 $('body')
   .append(result)
